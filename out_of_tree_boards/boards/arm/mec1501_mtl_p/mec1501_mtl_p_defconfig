@@ -1,8 +1,3 @@
-#
-# Copyright (c) 2020, Intel Corporation
-#
-# SPDX-License-Identifier: Apache-2.0
-#
 
 CONFIG_SOC_MEC1501_HSZ=y
 CONFIG_SOC_SERIES_MEC1501X=y
