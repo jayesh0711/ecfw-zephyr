@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #include "kbs_keymap.h"
 #include <zephyr/sys/printk.h>
