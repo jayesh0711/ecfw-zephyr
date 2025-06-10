@@ -1,6 +1,3 @@
-# SPDX-License-Identifier: Apache-2.0
-#!/bin/bash
-
 source ${CI_EC_SCRIPTS}/boards_platforms.sh
 source ${CI_EC_SCRIPTS}/misc.sh
 
