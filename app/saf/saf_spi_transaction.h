@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SAF_SPI_TRANSACTION_H__
 #define __SAF_SPI_TRANSACTION_H__
