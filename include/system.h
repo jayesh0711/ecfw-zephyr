@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SYSTEM_H__
 #define __SYSTEM_H__
