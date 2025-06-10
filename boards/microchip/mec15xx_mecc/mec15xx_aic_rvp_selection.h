@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __MEC15XX_AIC_RVP_SELECTION_H__
 #define __MEC15XX_AIC_RVP_SELECTION_H__
