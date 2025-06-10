@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __MEC17XX_AIC_RVP_SELECTION_H__
 #define __MEC17XX_AIC_RVP_SELECTION_H__
