@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 
 #ifndef __DSW_MODE_H__
 #define __DSW_MODE_H__
