@@ -1,9 +1,4 @@
-# Kconfig - Config options for EC FW DTT module
-#
-# Copyright (c) 2021 Intel Corporation
-#
-# SPDX-License-Identifier: Apache-2.0
-#
+
 
 menuconfig DTT_SUPPORT
 	bool "DTT (Dynamic Thermal Tuning) framework support"
