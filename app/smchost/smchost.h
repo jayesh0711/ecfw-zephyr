@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 /**
  * @file
  * @brief APIs for system management controller
