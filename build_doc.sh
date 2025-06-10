@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: Apache-2.0
+
 
 # To build documentation
 # ./build_doc.sh
