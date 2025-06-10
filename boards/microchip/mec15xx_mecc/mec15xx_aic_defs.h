@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __MEC15XX_AIC_DEFS_H__
 #define __MEC15XX_AIC_DEFS_H__
