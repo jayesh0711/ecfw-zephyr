@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 #include <errno.h>
 #include <zephyr/logging/log_ctrl.h>
 #include <zephyr/logging/log.h>
