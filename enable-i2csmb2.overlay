@@ -1,8 +1,5 @@
 /*
- * Copyright (c) 2022, Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- *
+ 
  * Modify as needed for development with custom I2C port numbers
  * Usage:
  *       west build -c -p <BOARD> -- -DDTC_OVERLAY_FILE=enable-i2csmb2.overlay
