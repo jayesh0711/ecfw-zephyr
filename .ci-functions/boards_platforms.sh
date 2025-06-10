@@ -1,5 +1,3 @@
-# SPDX-License-Identifier: Apache-2.0
-#!/bin/bash
 
 #               Platform (folder name)  Board config               Additional cfg
 declare -a R01=("adl_p"			"mec1501_adl_p"			"")
