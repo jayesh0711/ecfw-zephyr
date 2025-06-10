@@ -1,11 +1,4 @@
-/*
- * Copyright (c) 2020, Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 /dts-v1/;
-
 #include "mec1501_mtl_p-pinctrl.dtsi"
 
 / {
@@ -83,7 +76,7 @@
 	scl-gpios = <&gpio_000_036 4 0>;
 	pinctrl-0 = < &i2c00_scl_gpio004 &i2c00_sda_gpio003 >;
 	pinctrl-names = "default";
-
+        
 	pca9555@22 {
 		compatible = "nxp,pca95xx";
 
