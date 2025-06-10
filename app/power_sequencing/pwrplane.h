@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __PWRPLANE_H__
 #define __PWRPLANE_H__
