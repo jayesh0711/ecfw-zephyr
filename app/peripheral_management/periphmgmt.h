@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __PERIPH_MGMT_H__
 #define __PERIPH_MGMT_H__
