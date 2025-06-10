@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __KBS_BOOT_KEY_SEQ_H__
 #define __KBS_BOOT_KEY_SEQ_H__
