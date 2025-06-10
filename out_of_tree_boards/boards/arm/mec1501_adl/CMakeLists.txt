@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2020 Microchip Technology Inc.
+
 #
 # SPDX-License-Identifier: Apache-2.0
 #
