@@ -1,10 +1,4 @@
 
-/*
- * Copyright (c) 2022, Intel Corporation Inc.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 /dts-v1/;
 
 #include <microchip/mec172xnsz.dtsi>
