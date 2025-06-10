@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __TASK_HANDLER_H__
 #define __TASK_HANDLER_H__
