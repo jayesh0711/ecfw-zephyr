@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
+
 
 #ifndef __DNX_EC_ASSISTED_TRIGGER_H__
 #define __DNX_EC_ASSISTED_TRIGGER_H__
