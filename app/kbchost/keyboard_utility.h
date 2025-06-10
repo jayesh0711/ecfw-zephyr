@@ -1,14 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
-/**
- * @file
- * @brief Utility APIs for transating keys and hotkeys for
- * the keyscan and ps2 keyboards.
- */
 
 
 #ifndef __KEYBOARD_UTILITY_H__
