@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SOFTSTRAP_H__
 #define __SOFTSTRAP_H__
