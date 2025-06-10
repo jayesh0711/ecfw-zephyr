@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __PWRSEQ_TIMEOUTS_H__
 #define __PWRSEQ_TIMEOUTS_H__
