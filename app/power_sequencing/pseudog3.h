@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __PSEUDO_G3_H__
 #define __PSEUDO_G3_H__
