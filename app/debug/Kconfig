@@ -1,0 +1,32 @@
+# Kconfig - Config options for EC FW debug module
+#
+# Copyright (c) 2021 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config POSTCODE_MANAGEMENT
+	bool "Enable postcode management"
+	default y
+	help
+	  Indicate if BIOS debug port 80 block is enabled and the values
+	  are intercepted and display in 7-segment display array.
+
+config POSTCODE_LOG_LEVEL
+	int "Debug Port80 log level"
+	depends on POSTCODE_MANAGEMENT
+	depends on LOG
+	default 2 if EC_DEBUG_LOG
+	default 0
+	help
+	  Set log level for debug Port 80 log level.
+
+config ESPI_PERIPHERAL_DEBUG_PORT_80
+	default y if POSTCODE_MANAGEMENT
+	default n
+
+config DEBUG_LED
+	bool "Enable generic debug support via keyboard leds"
+	help
+	  Repurpose keyboard LEDs to use as debug marker for timing
+	  analysis. This prevents keyboard LEDs mirroring.

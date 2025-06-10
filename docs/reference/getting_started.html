@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started &mdash; Basic Open Embedded Controller Firmware 3.01.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supported Hardware" href="supported_hw.html" />
+    <link rel="prev" title="Project overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Basic Open Embedded Controller Firmware
+          </a>
+              <div class="version">
+                3.01.02
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-zephyr-environment">Setting Up Zephyr environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#os-selection">1) OS selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-dependencies">2) Install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-zephyr-and-python-dependencies">3) Get Zephyr and Python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-zephyr-sdk-and-toolchain">4) Install Zephyr SDK and toolchain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ec-soc-vendor-specific-setup">5) EC SoC vendor-specific setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-ec-fw-framework-code">Getting EC FW framework code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clone-main-repository">1) Clone main repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#obtain-the-dependencies">2) Obtain the dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-back-ported-fixes">3) Apply back-ported fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshoot">Troubleshoot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-flashing">Building and flashing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-zephyr-environment-variables">1) Set zephyr environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-ec-fw">2) Build EC FW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Troubleshoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flash-ec-fw">Flash EC FW</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="supported_hw.html">Supported Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">EC FW application modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application_notes.html">EC FW application notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Basic Open Embedded Controller Firmware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/reference/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="getting-started">
+<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#pre-requisites" id="id3">Pre-requisites</a></p></li>
+<li><p><a class="reference internal" href="#setting-up-zephyr-environment" id="id4">Setting Up Zephyr environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#os-selection" id="id5">1) OS selection</a></p></li>
+<li><p><a class="reference internal" href="#install-dependencies" id="id6">2) Install dependencies</a></p></li>
+<li><p><a class="reference internal" href="#get-zephyr-and-python-dependencies" id="id7">3) Get Zephyr and Python dependencies</a></p></li>
+<li><p><a class="reference internal" href="#install-zephyr-sdk-and-toolchain" id="id8">4) Install Zephyr SDK and toolchain</a></p></li>
+<li><p><a class="reference internal" href="#ec-soc-vendor-specific-setup" id="id9">5) EC SoC vendor-specific setup</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#getting-ec-fw-framework-code" id="id10">Getting EC FW framework code</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clone-main-repository" id="id11">1) Clone main repository</a></p></li>
+<li><p><a class="reference internal" href="#obtain-the-dependencies" id="id12">2) Obtain the dependencies</a></p></li>
+<li><p><a class="reference internal" href="#apply-back-ported-fixes" id="id13">3) Apply back-ported fixes</a></p></li>
+<li><p><a class="reference internal" href="#troubleshoot" id="id14">Troubleshoot</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#building-and-flashing" id="id15">Building and flashing</a></p>
+<ul>
+<li><p><a class="reference internal" href="#set-zephyr-environment-variables" id="id16">1) Set zephyr environment variables</a></p></li>
+<li><p><a class="reference internal" href="#build-ec-fw" id="id17">2) Build EC FW</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id18">Troubleshoot</a></p></li>
+<li><p><a class="reference internal" href="#flash-ec-fw" id="id19">Flash EC FW</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>This project is based on Zephyr RTOS, so a Zephyr development environment is
+required.</p>
+<div class="section" id="pre-requisites">
+<h2><a class="toc-backref" href="#id3">Pre-requisites</a><a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>GitHub account</p></li>
+<li><p>Ubuntu 18.04 LTS or later.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alternatively <a class="reference external" href="https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview">Ubuntu shell</a> installed on Windows can be used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If working in VPN or intranet environment need to set-up company proxy
+correctly for the command line tools which may include but not limited
+to apt-get wget, pip, git.</p>
+</div>
+</div>
+<div class="section" id="setting-up-zephyr-environment">
+<h2><a class="toc-backref" href="#id4">Setting Up Zephyr environment</a><a class="headerlink" href="#setting-up-zephyr-environment" title="Permalink to this heading">¶</a></h2>
+<p>Refer to the official <a class="reference external" href="https://docs.zephyrproject.org/3.2.0/develop/getting_started/index.html">Zephyr’s Getting Started Guide</a> while reviewing
+considerations below during each step.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Latest EC FW Open source project is based on Zephyr v3.4 so need to
+refer to Zephyr v3.4 documentation and use Zephyr SDK 0.16.1.</p>
+</div>
+<div class="section" id="os-selection">
+<h3><a class="toc-backref" href="#id5">1) OS selection</a><a class="headerlink" href="#os-selection" title="Permalink to this heading">¶</a></h3>
+<p>Recommended OS is Ubuntu since environment setup is simpler and Zephyr SDK is not
+available in Windows.</p>
+</div>
+<div class="section" id="install-dependencies">
+<h3><a class="toc-backref" href="#id6">2) Install dependencies</a><a class="headerlink" href="#install-dependencies" title="Permalink to this heading">¶</a></h3>
+<p>Steps 2.1 and 2.2 from Zephyr guide are mandatory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the tool is already present in the Ubuntu host, uninstall it and
+get the latest from a third-party Ubuntu repository as indicated.</p>
+</div>
+</div>
+<div class="section" id="get-zephyr-and-python-dependencies">
+<h3><a class="toc-backref" href="#id7">3) Get Zephyr and Python dependencies</a><a class="headerlink" href="#get-zephyr-and-python-dependencies" title="Permalink to this heading">¶</a></h3>
+<p>Steps 3.1, 3.2, 3.3, 3.4, 3.5 and 3.7 from Zephyr guide are mandatory.
+This will retrieve a copy Zephyr RTOS and install all python dependencies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zephyr copy cloned during this step is the latest kernel version under
+development and is not used as part of EC FW project.</p>
+</div>
+</div>
+<div class="section" id="install-zephyr-sdk-and-toolchain">
+<h3><a class="toc-backref" href="#id8">4) Install Zephyr SDK and toolchain</a><a class="headerlink" href="#install-zephyr-sdk-and-toolchain" title="Permalink to this heading">¶</a></h3>
+<p>Steps 4.1, 4.2 and 4.3 from Zephyr guide are mandatory.
+Step 4.4 is only required if flashing HW via command line instead of using
+Dediprog.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A toolchain is needed in some cases to compile for a specific EC SoC.
+Zephyr SDK already contains several toolchains.
+This project uses Microchip MEC15xx/MEC172x which is an arm-based
+microcontroller, so gnu arm-eabi toolchain included in SDK can be used.</p>
+</div>
+</div>
+<div class="section" id="ec-soc-vendor-specific-setup">
+<h3><a class="toc-backref" href="#id9">5) EC SoC vendor-specific setup</a><a class="headerlink" href="#ec-soc-vendor-specific-setup" title="Permalink to this heading">¶</a></h3>
+<p>Currently only MEC15xx and MEC172x are supported.
+Perform steps 1 to 3 from Setup section in <a class="reference external" href="https://docs.zephyrproject.org/latest/boards/arm/mec1501modular_assy6885/doc/index.html#programming-and-debugging">MEC15xx EVB Setup guide</a> and
+steps 2 to 4 from Setup section in <a class="reference external" href="https://docs.zephyrproject.org/latest/boards/arm/mec172xevb_assy6906/doc/index.html#programming-and-debugging">MEC172x EVB Setup guide</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GitHub repo root folder is <a class="reference external" href="https://github.com/MicrochipTech/CPGZephyrDocs">MEC SPI generator tools</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="getting-ec-fw-framework-code">
+<h2><a class="toc-backref" href="#id10">Getting EC FW framework code</a><a class="headerlink" href="#getting-ec-fw-framework-code" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="clone-main-repository">
+<h3><a class="toc-backref" href="#id11">1) Clone main repository</a><a class="headerlink" href="#clone-main-repository" title="Permalink to this heading">¶</a></h3>
+<p>Create a folder sandbox and clone ecfw-zephyr project</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/sandbox
+<span class="nb">cd</span><span class="w"> </span>~/sandbox
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/intel/ecfw-zephyr
+</pre></div>
+</div>
+</div>
+<div class="section" id="obtain-the-dependencies">
+<h3><a class="toc-backref" href="#id12">2) Obtain the dependencies</a><a class="headerlink" href="#obtain-the-dependencies" title="Permalink to this heading">¶</a></h3>
+<p>Navigate to west manifest location inside ecfw-zephyr and re-initialize west</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ecfw-zephyr
+west<span class="w"> </span>init<span class="w"> </span>-l
+</pre></div>
+</div>
+<p>See EC FW’s dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>list
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 22%" />
+<col style="width: 13%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repo</p></th>
+<th class="head"><p>destination</p></th>
+<th class="head"><p>revision</p></th>
+<th class="head"><p>external repository</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>zephyr</p></td>
+<td><p>zephyr_fork</p></td>
+<td><p>v3.4.0</p></td>
+<td><p><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr">https://github.com/zephyrproject-rtos/zephyr</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cmsis</p></td>
+<td><p>modules/hal/cmsis</p></td>
+<td><p>74981bf</p></td>
+<td><p><a class="reference external" href="https://github.com/zephyrproject-rtos/cmsis">https://github.com/zephyrproject-rtos/cmsis</a></p></td>
+</tr>
+<tr class="row-even"><td><p>hal_microchip</p></td>
+<td><p>modules/hal/microchip</p></td>
+<td><p>5d079f1</p></td>
+<td><p><a class="reference external" href="https://github.com/zephyrproject-rtos/hal_microchip">https://github.com/zephyrproject-rtos/hal_microchip</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieve all external project dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>update
+</pre></div>
+</div>
+<p>Your directory structure should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sandbox</span>
+<span class="o">|</span><span class="n">____ecfw</span><span class="o">-</span><span class="n">zephyr</span>               <span class="n">This</span> <span class="n">repository</span>
+<span class="o">|</span><span class="n">____ecfwwork</span><span class="o">/</span><span class="n">modules</span>          <span class="n">Zephyr</span> <span class="n">RTOS</span> <span class="n">modules</span> <span class="n">includes</span> <span class="n">EC</span> <span class="n">SoC</span> <span class="n">HAL</span>
+<span class="o">|</span><span class="n">____ecfwwork</span><span class="o">/</span><span class="n">zephyr_fork</span>      <span class="n">Snapshot</span> <span class="kn">from</span> <span class="nn">Zephyr</span> <span class="n">RTOS</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="apply-back-ported-fixes">
+<h3><a class="toc-backref" href="#id13">3) Apply back-ported fixes</a><a class="headerlink" href="#apply-back-ported-fixes" title="Permalink to this heading">¶</a></h3>
+<p>Some additional patches are required to be applied to the Zephyr kernel
+for building the open source EC FW application. The latest release is based out
+of Zephyr v3.4 and hence these patches need to be applied on that branch.</p>
+<p>These patches are expected to be part of the future Zephyr releases (if
+they are not already integrated).</p>
+<p>Note: Below steps assume environment has been setup as indicated in the
+main Intel Open source EC FW documentation.</p>
+<ol class="arabic simple">
+<li><p>Check out the main branch</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ecfw-zephyr
+git<span class="w"> </span>checkout<span class="w"> </span>master
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Apply zephyr patches on to the kernel branch</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../ecfwwork/zephyr_fork
+git<span class="w"> </span>am<span class="w"> </span>../../ecfw-zephyr/zephyr_patches/patches_v3.4.patch
+</pre></div>
+</div>
+</div>
+<div class="section" id="troubleshoot">
+<h3><a class="toc-backref" href="#id14">Troubleshoot</a><a class="headerlink" href="#troubleshoot" title="Permalink to this heading">¶</a></h3>
+<p>If west init throws an error during the step above, it means it detected a previous
+west installation. It’s safe to delete/backup pre-existing “.west” folder</p>
+<p>For other problems refer to <a class="reference external" href="https://docs.zephyrproject.org/latest/develop/west/index.html">west documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="building-and-flashing">
+<h2><a class="toc-backref" href="#id15">Building and flashing</a><a class="headerlink" href="#building-and-flashing" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="set-zephyr-environment-variables">
+<h3><a class="toc-backref" href="#id16">1) Set zephyr environment variables</a><a class="headerlink" href="#set-zephyr-environment-variables" title="Permalink to this heading">¶</a></h3>
+<p>Run the following command to indicate to Zephyr SDK tool active Zephyr path.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/sandbox/ecfwwork/zephyr_fork
+<span class="nb">source</span><span class="w"> </span>zephyr-env.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple zephyr trees can coexist under same environment, setting
+ZEPHYR_BASE environment variable through this script allows to switch
+between them.</p>
+</div>
+</div>
+<div class="section" id="build-ec-fw">
+<h3><a class="toc-backref" href="#id17">2) Build EC FW</a><a class="headerlink" href="#build-ec-fw" title="Permalink to this heading">¶</a></h3>
+<p>Go back to ecfw-zephyr main folder and build the application and all its dependencies.
+Below commands indicate details for each board. See Supported hardware section
+for more details.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/sandbox/ecfw-zephyr
+<span class="c1"># Building for MTL-S/ARL -S (on-board EC)</span>
+west<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>-p<span class="w"> </span>auto<span class="w"> </span>-b<span class="w"> </span>mec172x_mtl_s
+
+<span class="c1"># Building for MTL-P (on-board EC)</span>
+west<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>-p<span class="w"> </span>auto<span class="w"> </span>-b<span class="w"> </span>mec1501_mtl_p
+
+<span class="c1"># Building for TGL + MECC card (deprecated)</span>
+west<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>-p<span class="w"> </span>always<span class="w"> </span>-b<span class="w"> </span>mec1501modular_assy6885<span class="w"> </span>--<span class="w"> </span>-DCONFIG_MEC15XX_AIC_ON_TGL<span class="o">=</span>y
+
+<span class="c1"># Building for MTL-P + MECC card (i.e. mec172x)</span>
+west<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>-p<span class="w"> </span>always<span class="w"> </span>-b<span class="w"> </span>mec172xmodular_assy6930
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Additional EC vendors are enabling their MECC cards in Zephyr.
+Similar build is possible replacing -b &lt;modular board&gt;.</p>
+</div>
+<p>If build is successful, zephyr.bin and ksc.bin will be generated.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For modular cards this steps generates spi_image.bin instead.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w">  </span>~/sandbox/ecfw-zephyr/build/zephyr/*.bin
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id18">Troubleshoot</a><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<p>1) If build command gives error indicating no ZEPHYR_BASE or no zephyr
+repository, make sure that step 1) is executed correctly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>printenv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ZEPHYR_BASE
+</pre></div>
+</div>
+<ol class="arabic" start="2">
+<li><p>If spi_image.bin is not generated, revisit EC vendor-specific setup.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Ensure SPI generator is available</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>printenv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>SPI_GEN
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>Confirm the file is executable</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span>/usr/local/bin/everglades_spi_gen_lin64
+</pre></div>
+</div>
+<p>If file is not executable, make it executable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/everglades_spi_gen_lin64
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="flash-ec-fw">
+<h3><a class="toc-backref" href="#id19">Flash EC FW</a><a class="headerlink" href="#flash-ec-fw" title="Permalink to this heading">¶</a></h3>
+<p>Flash EC FW as indicated in Official Intel documentation in RVP user guide using
+Dediprog. Refer to <a class="reference external" href="https://www.intel.com/content/www/us/en/design/resource-design-center.html">Intel documentation</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023 Intel Corporation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

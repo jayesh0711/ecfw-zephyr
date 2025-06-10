@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EC FW application modules &mdash; Basic Open Embedded Controller Firmware 3.01.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Task Handling" href="task_handling/index.html" />
+    <link rel="prev" title="Port Basic EC FW to custom HW design" href="porting_ecfw_custom_hw/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Basic Open Embedded Controller Firmware
+          </a>
+              <div class="version">
+                3.01.02
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supported_hw.html">Supported Hardware</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EC FW application modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="task_handling/index.html">Task Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_sequencing/index.html">Power Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peripheral/index.html">Peripheral management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smc/index.html">System Management Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kbchost/index.html">Keyboard System Controller Host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kbchost/index.html#ec-hotkeys">EC hotkeys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kscan/index.html">Keyboard scan matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnx/index.html">EC support for Intel Download and Execute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="application_notes.html">EC FW application notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Basic Open Embedded Controller Firmware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EC FW application modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/reference/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ec-fw-application-modules">
+<h1>EC FW application modules<a class="headerlink" href="#ec-fw-application-modules" title="Permalink to this heading">¶</a></h1>
+<p>The embedded controller is divided in multiple software modules.
+Currently we support the following modules and planning to add more in the
+future.</p>
+<a class="reference internal image-reference" href="../_images/ecfw_zephyr_modules.png"><img alt="../_images/ecfw_zephyr_modules.png" class="align-center" src="../_images/ecfw_zephyr_modules.png" style="width: 600px;" /></a>
+<p>Each module section describes the functionality, main flows, implementation
+details and configuration options supported.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="task_handling/index.html">Task Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power_sequencing/index.html">Power Sequencing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peripheral/index.html">Peripheral management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smc/index.html">System Management Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kbchost/index.html">Keyboard System Controller Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kbchost/index.html#ec-hotkeys">EC hotkeys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kscan/index.html">Keyboard scan matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnx/index.html">EC support for Intel Download and Execute</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023 Intel Corporation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+# Kconfig - Config options for EC FW
+
+#
+# Copyright (c) 2019 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+mainmenu "Embedded controller firmware application"
+
+rsource "app/peripheral_management/Kconfig"
+rsource "app/debug/Kconfig"
+rsource "app/power_sequencing/Kconfig"
+rsource "app/saf/Kconfig"
+rsource "app/smchost/Kconfig"
+rsource "app/kbchost/Kconfig"
+rsource "app/thermal_management/Kconfig"
+
+menu "EC optional features"
+
+rsource "app/power_management/Kconfig"
+rsource "app/dnx/Kconfig"
+rsource "app/soc_debug_awareness/Kconfig"
+rsource "boards/Kconfig"
+
+endmenu
+
+menu "EC logging control"
+
+config EC_DEBUG_LOG
+	bool "Embedded controller logs"
+	depends on LOG
+	default y
+	help
+	  Enable minimum log level for all modules.
+
+config EC_LOG_LEVEL
+	int "Embedded controller application log level"
+	depends on LOG
+	default 2 if EC_DEBUG_LOG
+	default 0
+	help
+	  Set log level for EC FW app modules.
+
+config BOARD_LOG_LEVEL
+	int "Board initialization log level"
+	depends on LOG
+	default 2 if EC_DEBUG_LOG
+	default 0
+	help
+	  Set log level for board initialization module.
+
+endmenu
+
+rsource "drivers/Kconfig"
+
+source "Kconfig.zephyr"
