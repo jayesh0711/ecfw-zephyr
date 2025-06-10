@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2022 Intel Corporation.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SPI_WINBOND_OPCODES_H__
 #define __SPI_WINBOND_OPCODES_H__
