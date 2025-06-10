@@ -1,8 +1,6 @@
-#
 
-#
 # SPDX-License-Identifier: Apache-2.0
-#
+
 
 if(DEFINED ENV{EVERGLADES_SPI_GEN})
   # Grab it from environment variable if defined
