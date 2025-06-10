@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corportation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef SCAN_MATRIX_KB_H
 #define SCAN_MATRIX_KB_H
