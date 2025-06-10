@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2019 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 /**
  * @brief MAX6958 9-segment display driver APIs.
