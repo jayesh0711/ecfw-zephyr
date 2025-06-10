@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SMCHOST_EXTENDED_H__
 #define __SMCHOST_EXTENDED_H__
