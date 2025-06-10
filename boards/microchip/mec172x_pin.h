@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2022 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __MEC172X_PIN_H__
 #define __MEC172X_PIN_H__
