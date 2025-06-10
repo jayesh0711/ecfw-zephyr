@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __PMC_H__
 #define __PMC_H__
