@@ -1,5 +1,4 @@
-# SPDX-License-Identifier: Apache-2.0
-#!/bin/bash
+
 
 end="\033[0m"
 black="\033[0;30m"
