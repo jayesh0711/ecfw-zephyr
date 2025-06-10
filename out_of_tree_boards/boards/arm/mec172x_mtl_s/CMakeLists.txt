@@ -1,8 +1,3 @@
-#
-# Copyright (c) 2021 Microchip Technology Inc.
-#
-# SPDX-License-Identifier: Apache-2.0
-#
 
 #Allow users to pre-specify the tool using '-DMEC172X_SPI_GEN=<path-to-tool>/toolname'
 if (NOT DEFINED MEC172X_SPI_GEN)
