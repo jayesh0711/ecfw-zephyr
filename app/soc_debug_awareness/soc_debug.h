@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2021 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #ifndef __SOC_DEBUG_H__
 #define __SOC_DEBUG_H__
